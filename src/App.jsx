@@ -155,7 +155,7 @@ const loadFromFile = (e) => {
   return (
     <div className="container">
       <aside className="sidebar">
-        <h1>Halı Saha Kadro</h1>
+        <h1>Halı Saha Kadro Kurucu</h1>
         <button onClick={addPlayer}>Oyuncu Ekle</button>
 		<button onClick={saveToFile}>Kaydet</button>
 <label className="file-button">
