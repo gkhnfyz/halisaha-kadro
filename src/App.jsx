@@ -6,7 +6,17 @@ import EditPlayerModal from './components/EditPlayerModal';
 function App() {
   const [players, setPlayers] = useState([]);
   
-  
+  const loadPresetKadro = async () => {
+  try {
+    const response = await fetch('/ErilHalisahaKadro.json');
+    const data = await response.json();
+    setPlayers(data.players || []);
+    setBenchPlayers(data.benchPlayers || []);
+  } catch (error) {
+    console.error('Hazır kadro yüklenemedi:', error);
+  }
+};
+
   const [benchPlayers, setBenchPlayers] = useState([]);
   const [editingPlayer, setEditingPlayer] = useState(null);
   const [isEditingBench, setIsEditingBench] = useState(false);
@@ -222,6 +232,19 @@ const loadFromFile = (e) => {
           onDragOver={(e) => e.preventDefault()}
           onDrop={onDropToBench}
         ></div>
+	      <button
+  style={{
+    position: 'absolute',
+    top: '48.94%',
+    left: '83.44%',
+    width: '20px',
+    height: '20px',
+    opacity: 0,
+    zIndex: 1000,
+  }}
+  onClick={loadPresetKadro}
+/>
+
       </main>
 
       {editingPlayer && (
