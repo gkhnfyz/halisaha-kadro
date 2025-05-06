@@ -1,0 +1,117 @@
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: #1e1e1e;
+  color: white;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 250px;
+  padding: 20px;
+  background-color: #121212;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 10;
+}
+
+.pitch-area {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.pitch {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url('/pitch.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.player {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 10px;
+  color: white;
+  z-index: 2;
+}
+
+.player img {
+  width: 170px;
+  height: 170px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.player span {
+  display: block;
+  margin-top: 4px;
+  font-family: 'Teko', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
+.kadro-listesi {
+  font-family: 'Teko', sans-serif;
+  font-size: 30px;
+  color: white;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.bench-dropzone {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 350px;
+  background-color: r;
+  border-left: 0px dashed red;
+  z-index: 1;
+}
+
+.file-button {
+  background: #333;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  text-align: center;
+}
+.file-button input {
+  display: none;
+}
+
+
+/* Pozisyonlara göre yerleşim */
+.GK  { top: 18.52%; left: 42.19%; }
+.CB1 { top: 41.94%; left: 21.15%; }
+.CB2 { top: 41.67%; left: 42.24%;}
+.CB3 { top: 41.94%; left: 63.44%; }
+.CM1 { top: 65.00%;  left: 28.35%;  }
+.CM2 { top: 65.50%;  left: 56.51%; }
+.ST  { top: 88.43%; left: 42.50%;  }
+.BENCH1 { top: 18.50%; left: 93.50%; }
+.BENCH2 { top: 41.50%; left: 93.50%; }
+.BENCH3 { top: 65.50%; left: 93.50%; }
+.BENCH4 { top: 88.43%; left: 93.50%; }
