@@ -237,8 +237,8 @@ const loadFromFile = (e) => {
     position: 'absolute',
     top: '48.94%',
     left: '83.44%',
-    width: '500px',
-    height: '500px',
+    width: '50px',
+    height: '50px',
     opacity: 0,
     zIndex: 1000,
   }}
